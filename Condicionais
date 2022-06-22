@@ -1,0 +1,26 @@
+if nota >= 90:
+print("A")
+elif nota >= 80:
+print("B")
+elif nota >= 70:
+print("C")
+elif nota >= 60:
+print("D")
+else :
+print("E")
+
+if nota >= 60:
+print('Aprovado.')
+Else
+
+print('Reprovado.')
+
+______________________________
+
+def somar():
+x = 5
+a = 4
+b = 3
+x = a + b
+print(x)
+return x
