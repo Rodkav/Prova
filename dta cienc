@@ -1,0 +1,66 @@
+import pandas as pd
+uri = 'csv com filmes'
+pd.read_csv(uri)
+filmes = pd.read_csv(uri)
+filmes.head()
+filmes.size
+
+1. Ler somente uma coluna da massa: notas['nota']
+2. Trabalhando com Dados:
+● notas.head() #mostrar o cabeçalho com 5 registros
+● notas.columns = ['usuario' , 'filmeID','nota', 'momento']
+● notas['nota'].unique() #notas único
+● notas['nota'].mean() # nota mediana
+● notas['nota'].min() # nota mínima
+● notas.describe() #medidas estáticas disponíveis
+● notas['nota'].median() # nota média
+● notas['nota'].value_counts() # Qtde de notas
+● notas.query("filmeID==1") #buscas específicas
+● notas.shape #maior ocorrência
+● notas.groupby("filmeID").mean().nota #agrupar
+
+Bibliotecas: seaborn, matplotlib
+● importando as bibliotecas
+import matplotlib.pyplot as plt
+import seaborn as sns
+● Gerando os dados para o gráfico
+medias_por_filme = notas.groupby("filmeID").mean().nota
+● Gerando o Gráfico de histograma
+plt.hist(medias_por_filme)
+● Gerando Gráfico de plot
+sns.distplot(medias_por_filme)
+dados = {
+'lingua' :
+['ingles','portugues'],
+'total' : [50, 30]
+}
+dados = pd.DataFrame(dados)
+sns.barplot(x="lingua",
+y="total", data = dados)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
